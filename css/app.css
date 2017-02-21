@@ -2,8 +2,8 @@ html,body{
     width: 100%;
 }
 
-h1{
-    margin: 0 auto;
+head{
+    margin: 0px auto !important;
     display: block;
     color: red;
 }
