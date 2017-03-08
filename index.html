@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html ng-app="mine">
     <meta name="keywords" content="Sankar Raj, sksankarraj, web developer, Thamizhan, Tamilan, Tamil" />
     <meta name="description" content="Sankar Raj, a Web developer from Tamil Nadu and i'm proud to be a Thamizhan." />
     <meta name="author" content="Sankar Raj" />
@@ -8,26 +8,21 @@
         <title>Sankar Raj</title>
         <link rel="SHORTCUT ICON" href="sank.png" />
         <link href="lib/bootstrap.min.css" rel="stylesheet"  />
+        <script src="lib/jquery.min.js"></script>
         <link href="css/app.css" rel="stylesheet" />
+        <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-ui-router.min.js"></script>
+        <script src="js/app.js"></script>
+        <script src="js/mis.js"></script>
     </head>
     <body class="container-fluid">
         <div class="banner">
+            <p>தமிழ் வாழ்க!</p>
             <span class="pil">உ</span>
+            <p>தமிழர் வாழ்க!</p>
         </div>
         <div class="container-fluid">
-            <div class="content">
-                <p class="head"> Hey there, Its me Sankar Raj S.</p>
-                <img src="img/dp.jpg" alt="Sankar Raj" />
-            </div>
-             <div class="content">
-                <p class="head"> Hey there, Its me Sankar Raj S.</p>
-                <img src="img/dp.jpg" alt="Sankar Raj" />
-            </div>
-             <div class="content">
-                <p class="head"> Hey there, Its me Sankar Raj S.</p>
-                <img src="img/dp.jpg" alt="Sankar Raj" />
-            </div>
+            <div ui-view></div>
         </div>
-        
     </body>
 </html>

@@ -9,6 +9,16 @@ html,body{
     height: 30px;
     text-align: center;
 }
+.banner P{
+    margin:0px;
+    padding: 0px;
+}
+.banner P:first-child{
+    float: left;
+}
+.banner P:last-child{
+    float: right;
+}
 .pil{
     font-weight: bold;
     font-size: 12pt;
@@ -20,12 +30,17 @@ html,body{
     font-size: 16pt;
     display: inline-block;
 }
+.head-center{
+    font-size: 16pt;
+    display: block;
+    text-align: center;
+}
 .container-fluid{
     padding: 0px;
 }
 .content:nth-of-type(2n-1){
     background-color: #00796B;
-    height: 250px;
+    height: 350px;
     color: white;
 }
 .content:nth-of-type(2n-1)>img{
@@ -35,7 +50,7 @@ html,body{
 }
 .content:nth-of-type(2n){
     background-color: #303F9F;
-    height: 250px;
+    height: 350px;
     color: white;
 }
 .content:nth-of-type(2n)>img{
