@@ -8,17 +8,35 @@
         <title>Sankar Raj</title>
         <link rel="SHORTCUT ICON" href="sank.png" />
         <link href="lib/bootstrap.min.css" rel="stylesheet"  />
+        <link href="lib/font-awesome.min.css" rel="stylesheet"  />
         <script src="lib/jquery.min.js"></script>
         <link href="css/app.css" rel="stylesheet" />
         <script src="lib/angular.min.js"></script>
+        <script src="lib/angular-facebook.js"></script>
         <script src="lib/angular-ui-router.min.js"></script>
         <script src="js/app.js"></script>
         <script src="js/mis.js"></script>
         <base href="/me/" />
     </head>
-    <body class="container-fluid">
-        <div class="qoute">
-            
+    <body>
+        <div class="qoute"  ng-controller="quoteController as qCtrl">
+            <span id="btnP"></span>
+            <div class="loader">
+
+            </div>
+            <div class="timer">
+                Gone in <span id="loadTime"></span>
+            </div>
+            <div class="kural-cont">
+                <p>{{ qoute.kural[0] }} <br> {{ qoute.kural[1] }}</p>
+                <h5> பொருள்: </h5>
+                    <p>{{ qoute.meaning.ta_mu_va.substr(qoute.meaning.ta_mu_va.indexOf(':')+2) }}</p>
+                <h5> Meaning: </h5>
+                    <p>{{ qoute.meaning.en }}</p>
+                <cite>
+                    -from <a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7" target="_blank">Thirukkural</a>
+                </cite>
+            </div>
         </div>
         <div ng-hide="true" class="banner">
             <p>தமிழ் வாழ்க!</p>
