@@ -10,9 +10,9 @@ MySite.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
         });
         $locationProvider.html5Mode(true);
 }]);
-MySite.config(function(FacebookProvider) {
-        FacebookProvider.init('1292236160864774');
-});
+// MySite.config(function(FacebookProvider) {
+//         FacebookProvider.init('1292236160864774');
+// });
 MySite.run(function(){
     console.log("I'm OK");
 });
@@ -21,6 +21,7 @@ MySite.controller('quoteController',function($scope, $http){
     $http.get('./thirukural.json')
         .success(function(data){
             $scope.qoute=data.kurals[i];
+            console.log(data.kurals[i]);
         })
         .error(function(resp){
             console.log(resp);

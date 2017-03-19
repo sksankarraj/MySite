@@ -4,6 +4,7 @@
     <meta name="description" content="Sankar Raj, a Web developer from Tamil Nadu and i'm proud to be a Thamizhan." />
     <meta name="author" content="Sankar Raj" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <head>
         <title>Sankar Raj</title>
         <link rel="SHORTCUT ICON" href="sank.png" />
@@ -27,12 +28,14 @@
             <div class="timer">
                 Gone in <span id="loadTime"></span>
             </div>
+            <img src="img/Thiruvalluvar.png" class="valluvar" alt="Valluvan" />
             <div class="kural-cont">
                 <p>{{ qoute.kural[0] }} <br> {{ qoute.kural[1] }}</p>
                 <h5> பொருள்: </h5>
                     <p>{{ qoute.meaning.ta_mu_va.substr(qoute.meaning.ta_mu_va.indexOf(':')+2) }}</p>
                 <h5> Meaning: </h5>
                     <p>{{ qoute.meaning.en }}</p>
+                    <p>{{ qoute.section }}:{{ qoute.number }}
                 <cite>
                     -from <a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7" target="_blank">Thirukkural</a>
                 </cite>

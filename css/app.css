@@ -4,7 +4,18 @@ html,body{
     max-width: 100%;
     max-height: 100%;
 }
-
+body::-webkit-scrollbar{
+    width:15px;
+}
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    
+}
+ body::-webkit-scrollbar-thumb {
+  background-color: #00BCD4;
+  outline: 1px solid #d45120;
+  border-radius: 5px;   
+}
 .banner{
     margin: 0px auto !important;
     display: block;
@@ -34,7 +45,7 @@ html,body{
     display: inline-block;
 }
 .head-center{
-    font-size: 16pt;
+    font-size: px16pt;
     display: block;
     text-align: center;
 }
@@ -77,11 +88,18 @@ html,body{
     left: 0; 
     z-index: 99;
     overflow: hidden;
-    background-color: rgba(255, 255, 255, 0.96);
+    background-color: #fff;
 /*
     animation: fade;
     animation-duration: 1s;
 */
+}
+.qoute img{
+    margin: 0px auto;
+    width: 200px;
+    display: block;
+    height: 250px;
+    padding-top: 20px;
 }
 .loader{
     height: 5px;
@@ -103,7 +121,7 @@ html,body{
 .kural-cont{
     position: relative;
     left: 30%;
-    top: 30%;
+    top: 8%;
     text-align: justify;
     width: 500px;
 }
