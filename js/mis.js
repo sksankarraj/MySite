@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('div[style]').remove();
-    var qTime = 5000, i = 0;
+    var qTime = 6000, i = 0;
     $('#loadTime').text(qTime/1000);
     $('#btnP').addClass('fapause');
     var loadTOut= function(Tcb,Icb,time){

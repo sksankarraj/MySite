@@ -1,4 +1,4 @@
-var MySite = angular.module('mine',['ui.router','facebook']);
+var MySite = angular.module('mine',['ui.router']);
 
 MySite.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', function($stateProvider, $urlRouterProvider, $locationProvider){
     $urlRouterProvider.otherwise('/');
@@ -7,6 +7,11 @@ MySite.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
             url:'/',
             templateUrl:'web/front.html',
             controller:'indexController'
+        })
+        .state('sm', {
+            url:'/brbsoon',
+            templateUrl:'sm.html',
+            controller:'smController'
         });
         $locationProvider.html5Mode(true);
 }]);
@@ -16,17 +21,25 @@ MySite.config(['$stateProvider', '$urlRouterProvider', '$locationProvider', func
 MySite.run(function(){
     console.log("I'm OK");
 });
-MySite.controller('quoteController',function($scope, $http){
-    var i = Math.floor(Math.random() * 1300);
+
+MySite.controller('quoteController',function($scope, $http,  $state, $stateParams){
+    $http.get('../testapi/api/me/options')
+        .success(function(resp){
+            console.log(resp);
+        });
+    var i = Math.floor(Math.random() * 1332);
     $http.get('./thirukural.json')
         .success(function(data){
+            
             $scope.qoute=data.kurals[i];
-            console.log(data.kurals[i]);
         })
         .error(function(resp){
             console.log(resp);
         });
 });
-MySite.controller('indexController',function($scope,Facebook,$timeout){
-
+MySite.controller('indexController',function($scope,$timeout){
+    
+});
+MySite.controller('smController',function($scope,$timeout){
+    console.log('sm');
 });
