@@ -1,0 +1,60 @@
+@font-face {
+  font-family: 'Tangerine';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Tangerine'), url(http://fonts.gstatic.com/s/tangerine/v7/HGfsyCL5WASpHOFnouG-RFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+.side-nav{
+    position: fixed;
+    left:0px;
+    top:0px;
+    width: 200px;
+    height: 100%;
+    display: block;
+    z-index: 10;
+    background: rgba(0, 0, 0, 1);
+}
+.nav-list{
+    list-style: none;
+    color: #fff;
+    width: 100%;
+}
+.list-item{
+    margin: 25px 0px;
+    padding: 0px;
+    font-family: 'Tangerine',serif;
+    font-size: 22pt;
+    line-height: 18px;
+    vertical-align: middle;
+    display: block;
+    
+    cursor: pointer;
+}
+.list-item:hover{
+    text-decoration: none;
+}
+.list-item:hover{
+    background: rgba(40, 40, 40, 1);
+    
+}
+.list-item i{
+    margin: 0px;
+    padding: 5px;
+}
+.so-pro{
+    position: absolute;
+    left: 0px;
+    bottom: 10px;
+    background: rgba(40, 40, 40, 1);
+}
+.so-pro img{
+    margin: 0px auto;
+    width:199px;
+    display: block;
+}
+.active{
+    color: #8BC34A;
+    border: 0px solid #8BCc4A;
+    border-left-width: 3px;
+}

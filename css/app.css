@@ -167,5 +167,6 @@ body::-webkit-scrollbar-track {
     background-color: #fff;
 }
 .sm-text p:first-child {
+    text-transform: capitalize;
     font-size: 128pt;
 }

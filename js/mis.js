@@ -1,6 +1,6 @@
 $(document).ready(function(){
     $('div[style]').remove();
-    var qTime = 6000, i = 0;
+    var qTime = 1000, i = 0;
     $('#loadTime').text(qTime/1000);
     $('#btnP').addClass('fapause');
     var loadTOut= function(Tcb,Icb,time){
@@ -39,14 +39,11 @@ $(document).ready(function(){
             $(this).addClass('fapause');
         }
     });
-    
-    // var tOut = setTimeout(function(){
-    //         $('.qoute').animate( {
-    //             "left":"-100%"
-    //         },300);
-    //         clearInterval(int);
-    //     },qTime);
-    // $('img').hover(function(){
-
-    // });
+    setContentWidth();
+    function setContentWidth(){
+        $('#content').animate({
+            "margin-left":$('.side-nav').width()
+        },300);
+        console.log($('#content').width());
+    }
 });

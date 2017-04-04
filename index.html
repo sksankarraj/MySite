@@ -11,11 +11,15 @@
         <link href="lib/bootstrap.min.css" rel="stylesheet"  />
         <link href="lib/font-awesome.min.css" rel="stylesheet"  />
          <script src="lib/jquery.min.js"></script>
-        <link href="css/app.css" rel="stylesheet" />
+        <link href="css/app.css?ver=2.0" rel="stylesheet" />
+        <link href="css/side.css?ver=3.0" rel="stylesheet" />
         <script src="lib/angular.min.js"></script>
         <script src="lib/angular-facebook.js"></script>
         <script src="lib/angular-ui-router.min.js"></script>
         <script src="js/app.js"></script>
+        <script src="js/services.js"></script>
+        <script src="js/route.js"></script>
+        <script src="js/controller.js"></script>
         <script src="js/mis.js"></script>
         <base href="/me/" />
     </head>
@@ -23,7 +27,6 @@
         <div class="qoute"  ng-controller="quoteController as qCtrl">
             <span id="btnP"></span>
             <div class="loader">
-
             </div>
             <div class="timer">
                 Gone in <span id="loadTime"></span>
@@ -41,12 +44,33 @@
                 </cite>
             </div>
         </div>
+        
         <div ng-hide="true" class="banner">
             <p>தமிழ் வாழ்க!</p>
             <span class="pil">உ</span>
             <p>தமிழர் வாழ்க!</p>
         </div>
-        <div class="container-fluid">
+        <div id="content" class="container-fluid">
+            <div class="side-nav">
+            <div class="nav-list">
+                <p ui-sref="/" ui-sref-active="active" class="list-item">
+                    <i class="fa fa-home"></i> Home
+                </p>
+                <p ui-sref="about" ui-sref-active="active"  class="list-item">
+                    <i class="fa fa-user-o"></i> About Me
+                </p>
+                <p ui-sref="blog" ui-sref-active="active" class="list-item">
+                    <i class="fa fa-code"></i> Blog
+                </p>
+                <p ui-sref="contact" ui-sref-active="active" class="list-item">
+                    <i class="fa fa-address-book-o"></i> Contact
+                </p>
+            </div>
+            <div class="so-pro">
+                <a href="http://stackoverflow.com/users/2131576/sankar-raj" target="_blank">
+                <img src="https://stackexchange.com/users/flair/2443711.png?theme=dark"  alt="profile for Sankar Raj on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Sankar Raj on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
+            </div>
+        </div>
             <div ui-view></div>
         </div>
     </body>
