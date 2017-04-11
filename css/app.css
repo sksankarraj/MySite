@@ -55,18 +55,13 @@ body::-webkit-scrollbar-track {
     width: 100%;
     height: auto;
 }
-
 .content{
     height: 550px;
     position: relative;
 }
-.main-cont .content:nth-child(1){
-    background-color: #00796B;
-    color: #fff;
-}
-.main-cont .content:nth-child(2){
-    background-color: #a5441f;
-    color: #fff;
+.main-cont .content{
+    background-color: #ddd;
+    color: #9E9E9E;
 }
 .img-overlay{
     position: absolute;
