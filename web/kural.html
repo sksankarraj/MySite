@@ -1,0 +1,20 @@
+<div class="quote">
+    <span id="btnP"></span>
+    <div class="loader">
+    </div>
+    <div class="timer">
+        Gone in <span id="loadTime"></span>
+    </div>
+    <img src="img/Thiruvalluvar.png" class="valluvar" alt="Valluvan" />
+    <div class="kural-cont">
+        <p>{{ quote.kural[0] }} <br> {{ quote.kural[1] }}</p>
+        <h5> பொருள்: </h5>
+        <p>{{ quote.meaning.ta_mu_va.substr(quote.meaning.ta_mu_va.indexOf(':')+2) }}</p>
+        <h5> Meaning: </h5>
+        <p>{{ quote.meaning.en }}</p>
+        <p>{{ quote.section }}:{{ quote.number }}
+            <cite>
+                    -from <a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7" target="_blank">Thirukkural</a>
+            </cite>
+    </div>
+</div>

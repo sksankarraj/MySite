@@ -1,4 +1,4 @@
-var MySite = angular.module('mine',['ui.router']);
+var MySite = angular.module('mine',['ui.router', 'ngAnimate']);
 
 
 // MySite.config(function(FacebookProvider) {

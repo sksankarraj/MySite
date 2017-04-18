@@ -1,65 +1,56 @@
 <!doctype html>
 <html ng-app="mine">
-    <meta name="keywords" content="Sankar Raj, sksankarraj, web developer, Thamizhan, Tamilan, Tamil" />
-    <meta name="description" content="Sankar Raj, a Web developer from Tamil Nadu and i'm proud to be a Thamizhan." />
-    <meta name="author" content="Sankar Raj" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <head>
-        <title>Sankar Raj</title>
-        <link rel="SHORTCUT ICON" href="sank.png" />
-        <link href="lib/bootstrap.min.css" rel="stylesheet"  />
-        <link href="lib/font-awesome.min.css" rel="stylesheet"  />
-         <script src="lib/jquery.min.js"></script>
-        <link href="css/app.css?ver=2.0" rel="stylesheet" />
-        <link href="css/side.css?ver=3.0" rel="stylesheet" />
-        <script src="lib/angular.min.js"></script>
-        <script src="lib/angular-facebook.js"></script>
-        <script src="lib/angular-ui-router.min.js"></script>
-        <script src="js/app.js"></script>
-        <script src="js/services.js"></script>
-        <script src="js/route.js"></script>
-        <script src="js/controller.js"></script>
-        <script src="js/mis.js"></script>
-        <base href="/me/" />
-    </head>
-    <body>
-        <div class="qoute"  ng-controller="quoteController as qCtrl">
-            <span id="btnP"></span>
-            <div class="loader">
-            </div>
-            <div class="timer">
-                Gone in <span id="loadTime"></span>
-            </div>
-            <img src="img/Thiruvalluvar.png" class="valluvar" alt="Valluvan" />
-            <div class="kural-cont">
-                <p>{{ qoute.kural[0] }} <br> {{ qoute.kural[1] }}</p>
-                <h5> பொருள்: </h5>
-                    <p>{{ qoute.meaning.ta_mu_va.substr(qoute.meaning.ta_mu_va.indexOf(':')+2) }}</p>
-                <h5> Meaning: </h5>
-                    <p>{{ qoute.meaning.en }}</p>
-                    <p>{{ qoute.section }}:{{ qoute.number }}
-                <cite>
-                    -from <a href="https://en.wikipedia.org/wiki/Tirukku%E1%B9%9Ba%E1%B8%B7" target="_blank">Thirukkural</a>
-                </cite>
-            </div>
-        </div>
-        
-        <div ng-hide="true" class="banner">
-            <p>தமிழ் வாழ்க!</p>
-            <span class="pil">உ</span>
-            <p>தமிழர் வாழ்க!</p>
-        </div>
-        <div id="content" class="container-fluid">
-            <div class="side-nav">
+<meta name="keywords" content="Sankar Raj, sksankarraj, web developer, Thamizhan, Tamilan, Tamil" />
+<meta name="description" content="Sankar Raj, a Web developer from Tamil Nadu and i'm proud to be a Thamizhan." />
+<meta name="author" content="Sankar Raj" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>Sankar Raj</title>
+    <link rel="SHORTCUT ICON" href="sank.png" />
+    <link href="lib/bootstrap.min.css" rel="stylesheet" />
+    <link href="lib/font-awesome.min.css" rel="stylesheet" />
+    <script src="lib/jquery.min.js"></script>
+    <link href="css/app.css?ver=2.0" rel="stylesheet" />
+    <link href="css/side.css?ver=3.0" rel="stylesheet" />
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-facebook.js"></script>
+    <script src="lib/angular-ui-router.js"></script>
+    <script src="lib/angular-animate.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/route.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/controller.js"></script>
+    
+    <base href="/me/" />
+</head>
+
+<body>
+   
+    <div class="main-nav nav-home">
+        <i ui-sref="/" class="fa fa-home"></i>
+    </div>
+    <div class="main-nav nav-about">
+        <p ui-sref="about"> About Me</p>
+    </div>
+    <div class="main-nav nav-blog">
+        <p ui-sref="blog">Blog</p>
+    </div>
+    <div class="main-nav nav-contact">
+        <p ui-sref="contact">Contact</p>
+    </div>
+    <div id="content" class="container-fluid">
+
+        <div class="side-nav">
             <div class="nav-list">
                 <div class="coll-menu">
-                    Sankar Raj<i class="fa fa-gear"></i> 
+                    <i class="fa fa-gear"></i>
                 </div>
                 <p ui-sref="/" ui-sref-active="active" class="list-item">
                     <i class="fa fa-home"></i> Home
                 </p>
-                <p ui-sref="about" ui-sref-active="active"  class="list-item">
+                <p ui-sref="about" ui-sref-active="active" class="list-item">
                     <i class="fa fa-user-o"></i> About Me
                 </p>
                 <p ui-sref="blog" ui-sref-active="active" class="list-item">
@@ -71,23 +62,32 @@
             </div>
             <div class="pro">
                 <div>
-                   <a target="_blank" class="git-pro" href="https://github.com/sksankarraj"> 
+                    <a target="_blank" class="git-pro" href="https://github.com/sksankarraj">
                         <i class="fa fa-github-square "></i>
-                   </a>
-                   <a target="_blank" class="link-pro" href="https://www.linkedin.com/in/sankar-raj-93556170/"> 
+                    </a>
+                    <a target="_blank" class="link-pro" href="https://www.linkedin.com/in/sankar-raj-93556170/">
                         <i class="fa fa-linkedin-square"></i>
-                   </a>
-                   <a target="_blank" class="face-pro" href="https://www.facebook.com/sksankarraj"> 
+                    </a>
+                    <a target="_blank" class="face-pro" href="https://www.facebook.com/sksankarraj">
                         <i class="fa fa-facebook-square"></i>
-                   </a>
+                    </a>
+                    <a target="_blank" class="twit-pro" href="https://www.twitter.com/sankar8893">
+                        <i class="fa fa-twitter-square"></i>
+                    </a>
+                    <a target="_blank" class="sky-pro" href="skype:sank_a_coder">
+                        <i class="fa fa-skype"></i>
+                    </a>
                 </div>
                 <div class="so-pro">
                     <a href="http://stackoverflow.com/users/2131576/sankar-raj" target="_blank">
-                    <img src="https://stackexchange.com/users/flair/2443711.png?theme=clean"  alt="profile for Sankar Raj on Stack Exchange, a network of free, community-driven Q&amp;A sites" title="profile for Sankar Raj on Stack Exchange, a network of free, community-driven Q&amp;A sites" /></a>
+                        <img src="https://stackexchange.com/users/flair/2443711.png?theme=clean" alt="profile for Sankar Raj on Stack Exchange, a network of free, community-driven Q&amp;A sites"
+                            title="profile for Sankar Raj on Stack Exchange, a network of free, community-driven Q&amp;A sites"
+                        /></a>
                 </div>
             </div>
         </div>
-            <div ui-view></div>
-        </div>
-    </body>
+        <div class="container-fluid {{pageClass}} anime" ng-animate="animate" ui-view></div>
+    </div>
+</body>
+
 </html>

@@ -1,9 +1,16 @@
-html,body{
+html,
+body {
     width: 100%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
 }
+
+.container-fluid {
+    height: 100%;
+}
+
+
 /*body::-webkit-scrollbar{
     width:15px;
 }
@@ -15,153 +22,198 @@ body::-webkit-scrollbar-track {
   outline: 1px solid #d45120;
   border-radius: 5px;   
 }*/
-.banner{
-    margin: 0px auto !important;
-    display: block;
-    width: 100%;
-    height: 30px;
-    text-align: center;
-}
-.banner P{
-    margin:0px;
-    padding: 0px;
-}
-.banner P:first-child{
-    float: left;
-}
-.banner P:last-child{
-    float: right;
-}
-.pil{
-    font-weight: bold;
-    font-size: 12pt;
-    clear: both;
-    border: 0px double black ;
-    border-bottom-width: 5px;
-}
-.head{
-    font-size: 16pt;
-    display: inline-block;
-}
-.head-center{
-    font-size: px16pt;
-    display: block;
-    text-align: center;
-}
-.container-fluid{
-    padding: 0px;
-}
-.main-cont{
-    width: 100%;
-    height: auto;
-}
-.content{
-    height: 550px;
-    position: relative;
-}
-.main-cont .content{
-    background-color: #ddd;
-    color: #9E9E9E;
-}
-.img-overlay{
-    position: absolute;
-    left: 43%;
-    top: 50%;
-}
 
-.img-overlay img{
-    border-radius: 50%;
-    width: 200px;
-    height:200px;
-}
-.qoute{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0; 
-    left: 0; 
-    z-index: 99;
-    overflow: hidden;
-    background-color: #fff;
-/*
-    animation: fade;
-    animation-duration: 1s;
-*/
-}
-.qoute img{
-    margin: 0px auto;
-    width: 150px;
-    display: block;
-    height: 200px;
-    padding-top: 20px;
-}
-.loader{
-    height: 5px;
-    width: 0px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    z-index:9; 
-    background: red;
-}
-@keyframes fade{
-    0%{
-        opacity: 1;
+@media (max-width:480px) {}
+
+@media (min-width:481px) and (max-width:720px) {}
+
+@media (min-width:721px) and (max-width:1200px) {}
+
+@media (min-width:1201px) {
+    .pil {
+        font-weight: bold;
+        font-size: 12pt;
+        clear: both;
+        border: 0px double black;
+        border-bottom-width: 5px;
     }
-    100%{
-        opacity: 0;
+    .head {
+        font-size: 16pt;
+        display: inline-block;
     }
-}
-.kural-cont{
-    position: relative;
-    left: 30%;
-    top: 8%;
-    text-align: justify;
-    width: 500px;
-}
-.kural-cont p:nth-of-type(1){
-    font-weight: bold;
-    font-size: 14pt;
-    white-space: nowrap;
-}
-.kural-cont cite{
-    float: right;
-}
-.timer{
-    position: absolute;
-    top: 10px;
-    vertical-align: middle; 
-    right: 10px;
-}
-#btnP{
-    position: absolute;
-    right:30px;
-    bottom: 30px;
-    z-index: 99;
-    cursor: pointer;
-    font-size: 20pt;
-}
-.faplay::before{
-    content: "\f01d";
-    font-family: FontAwesome;
-    color: #ff0000;
-}
-.fapause::before{
-    content: "\f28c";
-    font-family: FontAwesome;
-    color: #ff0000;
-}
-.sm-text{
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0; 
-    left: 0; 
-    z-index: 99;
-    overflow: hidden;
-    background-color: #fff;
-}
-.sm-text p:first-child {
-    text-transform: capitalize;
-    font-size: 128pt;
+    .head-center {
+        font-size: 16pt;
+        display: block;
+        text-align: center;
+    }
+    .container-fluid {
+        padding: 0px;
+    }
+    .main-cont {
+        width: 100%;
+        height: 100%;
+    }
+    .content {
+        height: 100%;
+        position: relative;
+    }
+    .index-view {
+        background: gray;
+    }
+    .about-view {
+        background: yellow;
+    }
+    .blog-view {
+        background: red;
+    }
+    .contact-view {
+        background: green;
+    }
+    .img-overlay {
+        width: 100%;
+    }
+    .img-overlay img {
+        border-radius: 50%;
+        width: 150px;
+        margin: -200px auto;
+        height: 150px;
+        display: block;
+    }
+    .quote {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    .quote img {
+        margin: 0px auto;
+        width: 150px;
+        display: block;
+        height: 200px;
+        padding-top: 20px;
+    }
+    .loader {
+        height: 5px;
+        width: 0px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        z-index: 9;
+        background: red;
+    }
+    @keyframes fade {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+        }
+    }
+    .kural-cont {
+        position: relative;
+        left: 30%;
+        top: 8%;
+        text-align: justify;
+        width: 500px;
+    }
+    .kural-cont p:nth-of-type(1) {
+        font-weight: bold;
+        font-size: 14pt;
+        white-space: nowrap;
+    }
+    .kural-cont cite {
+        float: right;
+    }
+    .timer {
+        position: absolute;
+        top: 10px;
+        vertical-align: middle;
+        right: 10px;
+    }
+    #btnP {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        z-index: 10;
+        cursor: pointer;
+        font-size: 20pt;
+    }
+    .faplay::before {
+        content: "\f01d";
+        font-family: FontAwesome;
+        color: #ff0000;
+    }
+    .fapause::before {
+        content: "\f28c";
+        font-family: FontAwesome;
+        color: #ff0000;
+    }
+    .sm-text {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        overflow: hidden;
+        background-color: #fff;
+    }
+    .sm-text p:first-child {
+        text-transform: capitalize;
+        font-size: 128pt;
+    }
+    .quote-view.ng-leave {
+        animation: slideOutLeft 0.5s both ease-in;
+        transform-origin: 0% 0%;
+    }
+    .anime {
+        bottom: 0;
+        padding-top: 200px;
+        position: absolute;
+        text-align: center;
+        top: 0;
+        width: 100%;
+        
+    }
+    .ng-leave {
+        z-index: 8;
+    }
+    @keyframes slideOutLeft {
+        from {
+            transform: translateX(0);
+        }
+        to {
+            transform: translateX(100%);
+        }
+    }
+    @keyframes rotateFall {
+        0% {
+            transform: rotateZ(0deg);
+        }
+        20% {
+            transform: rotateZ(10deg);
+            animation-timing-function: ease-out;
+        }
+        40% {
+            transform: rotateZ(17deg);
+        }
+        60% {
+            transform: rotateZ(16deg);
+        }
+        100% {
+            transform: translateY(100%) rotateZ(17deg);
+        }
+    }
+    @keyframes slideInRight {
+        from {
+            transform: translateX(100%);
+        }
+        to {
+            transform: translateX(0);
+        }
+    }
 }
