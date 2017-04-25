@@ -22,12 +22,16 @@
     <script src="js/route.js"></script>
     <script src="js/services.js"></script>
     <script src="js/controller.js"></script>
-    
+    <script>
+        $(document).ready(function () {
+            $('div[style]').remove();
+        });
+    </script>
     <base href="/me/" />
 </head>
 
 <body>
-   
+
     <div class="main-nav nav-home">
         <i ui-sref="/" class="fa fa-home"></i>
     </div>

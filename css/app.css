@@ -60,6 +60,15 @@ body::-webkit-scrollbar-track {
     .index-view {
         background: gray;
     }
+    .my-name{
+        margin-top:-50px;
+        padding: 0px;
+        color: #fff;
+        font-size:58pt;
+        font-weight: 500;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+    }
     .about-view {
         background: yellow;
     }
@@ -75,9 +84,9 @@ body::-webkit-scrollbar-track {
     .img-overlay img {
         border-radius: 50%;
         width: 150px;
-        margin: -200px auto;
+        margin: -250px auto auto;
         height: 150px;
-        display: block;
+        display: inline-block;
     }
     .quote {
         position: fixed;

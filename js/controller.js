@@ -42,6 +42,7 @@ MySite.controller('quoteController', function ($scope, $timeout, $http, $state, 
 MySite.controller('indexController', function ($scope, $http, $state, $stateParams, $window) {
     $scope.pageClass = 'index-view';
     $scope.title = 'Sankar Raj S';
+    $scope.myName = 'Sankar Raj';
     $scope.pageId = 1;
     $http.get('../testapi/api/me/options')
         .success(function (resp) {
@@ -54,12 +55,32 @@ MySite.controller('indexController', function ($scope, $http, $state, $statePara
             var temp = Math.abs(d1.getTime() - d2.getTime());
             return Math.floor(temp / (1000 * 60));
         };
+  var strArr = 'ABCDEFGHIIJKLMNOPQRSTUVWZ'.split('');
+  var nameArr = $scope.myName.toUpperCase().split('');
+  console.log(nameArr);
+  for(var i = 0; i<= nameArr.length - 1; i++){
+    doChange(nameArr[i], i);
+  }
+  function doChange(chr,i){
+   var Sint = setInterval(function(){
+      var rnd = Math.floor(Math.random() * 25);
+      nameArr[i] = strArr[rnd];
+      var str = nameArr.join('');
+      $('.my-name').text(str)
+    },i*80);
+   var tim = setTimeout(function(){
+      clearInterval(Sint);
+      nameArr[i] = chr;
+      var str = nameArr.join('');
+      $('.my-name').text(str)
+    }, (i+1) * 1000)
+  }
     }
     var now = new Date();
     if ($window.sessionStorage.getItem('q') != null)
         var diff = new dateDiff(new Date(), new Date($window.sessionStorage.getItem('q')));
     //console.log($window.sessionStorage.getItem('q'), (now.getMinutes() - new Date($window.sessionStorage.getItem('q')).getMinutes()));
-    if ($window.sessionStorage.getItem('q') == null || (diff.getMinDiff() >= 1)) {
+    if ($window.sessionStorage.getItem('q') == null || (diff.getMinDiff() >= 10)) {
         $state.go('qod');
         console.log($window.sessionStorage.getItem('q'), 'out');
         $window.sessionStorage.setItem('q', now);
