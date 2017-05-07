@@ -9,7 +9,9 @@ body {
 .container-fluid {
     height: 100%;
 }
-
+a:hover, a:focus{
+    text-decoration: none;
+}
 
 /*body::-webkit-scrollbar{
     width:15px;
@@ -58,16 +60,25 @@ body::-webkit-scrollbar-track {
         position: relative;
     }
     .index-view {
-        background: gray;
+        background: #eee;
     }
     .my-name{
         margin-top:-50px;
         padding: 0px;
-        color: #fff;
+        color: #111;
         font-size:58pt;
         font-weight: 500;
         letter-spacing: 5px;
         text-transform: uppercase;
+    }
+    .my-cont{
+        margin-top: 50px;
+        word-spacing: 5px;
+        letter-spacing: 2px;
+        font-size: 14pt;
+    }
+    .fa-heart{
+        color: red;
     }
     .about-view {
         background: yellow;
